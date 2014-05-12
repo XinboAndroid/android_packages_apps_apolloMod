@@ -95,7 +95,7 @@ public class TracksBrowser extends FragmentActivity implements ServiceConnection
         setContentView(R.layout.track_browser);
         registerForContextMenu(findViewById(R.id.half_artist_image));
         /**
-         * 我修改的。。。。。。。。。。
+         * 我修改的。。。。。。。..。。。
          * */
         initUI();
         //ImageCache
