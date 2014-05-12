@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.AsyncTask;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.widget.ImageView;
 import com.andrew.apolloMod.R;
 import com.andrew.apolloMod.helpers.GetBitmapTask;
@@ -74,8 +75,13 @@ public class ImageProvider implements GetBitmapTask.OnBitmapReadyListener{
         Bitmap bitmap = memCache.get(tag);
         if (bitmap == null)
             return false;
-        imageView.setTag(tag);
-        imageView.setImageBitmap(bitmap);
+        //防止出现空指针:setCachedBitmap::imageView
+        if(imageView!=null){
+        	imageView.setTag(tag);
+        	imageView.setImageBitmap(bitmap);
+        }else{
+        	Log.e("ImageProvider", "setCachedBitmap::imageView=null");
+        }
         return true;
     }
 
