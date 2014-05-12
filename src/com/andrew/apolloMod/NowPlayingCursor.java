@@ -21,6 +21,7 @@ public class NowPlayingCursor extends AbstractCursor {
         makeNowPlayingCursor();
         context = c;
     }
+    //做点注释什么的
 
     private void makeNowPlayingCursor() {
         mCurrentPlaylistCursor = null;
