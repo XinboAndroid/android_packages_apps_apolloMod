@@ -14,6 +14,7 @@ import com.andrew.apolloMod.helpers.RefreshableFragment;
 
 /**
  * @author Andrew Neal
+ *ViewPager适配器
  */
 public class PagerAdapter extends FragmentPagerAdapter {
 
@@ -23,16 +24,19 @@ public class PagerAdapter extends FragmentPagerAdapter {
         super(fragmentManager);
     }
 
+    //添加TabHost并通知适配器发生改变
     public void addFragment(Fragment fragment) {
         mFragments.add(fragment);
         notifyDataSetChanged();
     }
 
+    //返回ViewPager 页数
     @Override
     public int getCount() {
         return mFragments.size();
     }
 
+    //返回当前页
     @Override
     public Fragment getItem(int position) {
         return mFragments.get(position);
@@ -40,6 +44,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     /**
      * This method update the fragments that extends the {@link RefreshableFragment} class
+     * 刷新ViewPager方法
      */
     public void refresh() {
         for (int i = 0; i < mFragments.size(); i++) {
