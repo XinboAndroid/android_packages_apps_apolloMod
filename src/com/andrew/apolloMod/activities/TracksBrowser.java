@@ -94,8 +94,28 @@ public class TracksBrowser extends FragmentActivity implements ServiceConnection
         // Layout
         setContentView(R.layout.track_browser);
         registerForContextMenu(findViewById(R.id.half_artist_image));
+        /**
+         * 我修改的。。。。。。。。。。。。。
+         * */
+        initUI();
+        //ImageCache
+    	mImageProvider = ImageProvider.getInstance( this );
+        // Important!
+        whatBundle(icicle);
+        // Update the colorstrip color
+        initColorstrip();
+        // Update the ActionBar
+        initActionBar();
+        // Update the half_and_half layout
+        initUpperHalf();
+        // Important!
+        initPager();
+    }
 
-        mBActionbar =(BottomActionBarFragment) getSupportFragmentManager().findFragmentById(R.id.bottomactionbar_new);
+
+	private void initUI()
+	{
+		mBActionbar =(BottomActionBarFragment) getSupportFragmentManager().findFragmentById(R.id.bottomactionbar_new);
         mBActionbar.setUpQueueSwitch(this);
         
         mPanel = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
@@ -125,19 +145,7 @@ public class TracksBrowser extends FragmentActivity implements ServiceConnection
             @Override
             public void onPanelAnchored(View panel) {}
         });
-        //ImageCache
-    	mImageProvider = ImageProvider.getInstance( this );
-        // Important!
-        whatBundle(icicle);
-        // Update the colorstrip color
-        initColorstrip();
-        // Update the ActionBar
-        initActionBar();
-        // Update the half_and_half layout
-        initUpperHalf();
-        // Important!
-        initPager();
-    }
+	}
     
 
     @Override
