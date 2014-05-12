@@ -76,6 +76,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		// 请求新特性
+		
 		requestWindowFeature();
 		setContentView(R.layout.library_browser);
 		initSlidingUpPanel();
@@ -338,3 +339,4 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 		}
 	}
 }
+//////////////////////////////////////老胡到此一游//////////////////////////////////////////////
