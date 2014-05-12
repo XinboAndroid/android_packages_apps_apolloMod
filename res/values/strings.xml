@@ -84,6 +84,7 @@
     <!-- ContextMenu items -->
     <string name="play_all">Play all</string>
     <string name="add_to_playlist">Add to playlist</string>
+    <string name="create_Shortcut">Create_Shorcut</string>
     <string name="use_as_ringtone">Use as ringtone</string>
     <string name="delete_playlist">Delete playlist</string>
     <string name="search">Search</string>
