@@ -39,12 +39,13 @@ public class QuickQueueAdapter extends SimpleCursorAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        final View view = super.getView(position, convertView, parent);
-
+//      与我们所写的listview不同
+    	final View view = super.getView(position, convertView, parent);
+//      游标,指向下一个position
         Cursor mCursor = (Cursor) getItem(position);
         // ViewHolderQueue
         final ViewHolderQueue viewholder;
-
+//      listview的优化
         if (view != null) {
 
             viewholder = new ViewHolderQueue(view);
@@ -67,14 +68,14 @@ public class QuickQueueAdapter extends SimpleCursorAdapter {
 
         // Album ID
         String albumId = mCursor.getString(QuickQueueFragment.mAlbumIdIndex);
-
+//      ImageInfo 类似于HolidView  mAlbumArt初始化
         ImageInfo mInfo = new ImageInfo();
         mInfo.type = TYPE_ALBUM;
         mInfo.size = SIZE_THUMB;
         mInfo.source = SRC_FIRST_AVAILABLE;
         mInfo.data = new String[]{ albumId , artistName, albumName };        
         mImageProvider.loadImage( viewholder.mAlbumArt, mInfo );
-
+//      ImageInfo 类似于HolidView  mArtistImage初始化
         mInfo = new ImageInfo();
         mInfo.type = TYPE_ARTIST;
         mInfo.size = SIZE_THUMB;
