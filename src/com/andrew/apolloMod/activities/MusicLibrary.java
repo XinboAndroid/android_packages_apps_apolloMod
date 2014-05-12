@@ -209,6 +209,18 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 		Set<String> defaults = new HashSet<String>(Arrays.asList(getResources()
 				.getStringArray(R.array.tab_titles)));
 		Set<String> tabs_set = sp.getStringSet(TABS_ENABLED, defaults);
+		ViewPager mViewPager = chooseTabs(mPagerAdapter, defaults, tabs_set);
+
+		// Tabs
+		initScrollableTabs(mViewPager);
+	}
+
+	/**
+	 * 根据设置选择Tab页
+	 * @author cbw
+	 */
+	private ViewPager chooseTabs(PagerAdapter mPagerAdapter,
+			Set<String> defaults, Set<String> tabs_set) {
 		// if its empty fill reset it to full defaults
 		// stops app from crashing when no tabs are shown
 		// TODO:rewrite activity to not crash when no tabs are chosen to show
@@ -240,9 +252,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 
 		ViewPager mViewPager = initViewpager(mPagerAdapter);
 		// mViewPager.setCurrentItem(0);
-
-		// Tabs
-		initScrollableTabs(mViewPager);
+		return mViewPager;
 	}
 
 	private ViewPager initViewpager(PagerAdapter mPagerAdapter) {
