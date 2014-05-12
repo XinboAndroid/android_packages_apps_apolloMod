@@ -238,6 +238,14 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 		if (tabs_set.contains(getResources().getString(R.string.tab_genres)))
 			mPagerAdapter.addFragment(new GenresFragment());
 
+		ViewPager mViewPager = initViewpager(mPagerAdapter);
+		// mViewPager.setCurrentItem(0);
+
+		// Tabs
+		initScrollableTabs(mViewPager);
+	}
+
+	private ViewPager initViewpager(PagerAdapter mPagerAdapter) {
 		// Initiate ViewPager
 		ViewPager mViewPager = (ViewPager) findViewById(R.id.viewPager);
 		mViewPager.setPageMargin(getResources().getInteger(
@@ -245,10 +253,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 		mViewPager.setPageMarginDrawable(R.drawable.viewpager_margin);
 		mViewPager.setOffscreenPageLimit(mPagerAdapter.getCount());
 		mViewPager.setAdapter(mPagerAdapter);
-		// mViewPager.setCurrentItem(0);
-
-		// Tabs
-		initScrollableTabs(mViewPager);
+		return mViewPager;
 	}
 
 	/**
@@ -315,7 +320,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	}
 
 	/**
-	 * Initiate the Top Actionbar
+	 * 初始化Top Actionbar
 	 */
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
