@@ -199,6 +199,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	 * Initiate ViewPager and PagerAdapter
 	 */
 	public void initPager() {
+		//Samuel Going on it
 		// Initiate PagerAdapter
 		PagerAdapter mPagerAdapter = new PagerAdapter(
 				getSupportFragmentManager());
