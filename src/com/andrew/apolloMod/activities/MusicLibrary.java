@@ -210,12 +210,14 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 		// if its empty fill reset it to full defaults
 		// stops app from crashing when no tabs are shown
 		// TODO:rewrite activity to not crash when no tabs are chosen to show
+		//如果用户没有选择 ，则使用默认
 		if (tabs_set.size() == 0) {
 			tabs_set = defaults;
 		}
 
 		// Only show tabs that were set in preferences
 		// Recently added tracks
+		//根据设置里选择的项目判断是否添加TAB
 		if (tabs_set.contains(getResources().getString(R.string.tab_recent)))
 			mPagerAdapter.addFragment(new RecentlyAddedFragment());
 		// Artists
