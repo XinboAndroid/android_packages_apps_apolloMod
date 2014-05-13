@@ -250,7 +250,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection
         // Initiate PagerAdapter
         PagerAdapter mPagerAdapter = new PagerAdapter(
                 getSupportFragmentManager());
-        // Get tab visibility preferences
+        // 获得用户设置可见的Tab标签
         SharedPreferences sp = PreferenceManager
                 .getDefaultSharedPreferences(this);
         Set<String> defaults = new HashSet<String>(Arrays.asList(getResources()
