@@ -188,7 +188,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection
     private void requestWindowFeature()
     {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
-        // Scan for music
+        // 当扫描音乐时显示无尽进度条
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         // Landscape mode on phone isn't ready
         if (!ApolloUtils.isTablet(this))
