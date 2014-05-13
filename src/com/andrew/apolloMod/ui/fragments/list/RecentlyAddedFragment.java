@@ -16,7 +16,9 @@ import com.andrew.apolloMod.ui.fragments.base.ListViewFragment;
 import static com.andrew.apolloMod.Constants.NUMWEEKS;
 
 public class RecentlyAddedFragment extends ListViewFragment{
-
+		/*
+		 * 最近添加界面 和播放时间的设置 hb
+		 * */
     public void setupFragmentData(){
         mAdapter = new RecentlyAddedAdapter(getActivity(), R.layout.listview_items,
                 null, new String[] {}, new int[] {}, 0);
