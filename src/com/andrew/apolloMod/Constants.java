@@ -19,7 +19,6 @@ public final class Constants {
             PLAYLIST_NAME_FAVORITES = "Favorites", PLAYLIST_NAME = "playlist", WIDGET_STYLE="widget_type",
             VISUALIZATION_TYPE="visualization_type", DELETE_CACHE="delete_cache", BUILD_VERSION = "build_version",
             UP_STARTS_ALBUM_ACTIVITY = "upStartsAlbumActivity", TABS_ENABLED = "tabs_enabled";
-    public int a = 0;
     //Image Loading Constants
     public final static String TYPE_ARTIST = "artist", TYPE_ALBUM = "album", TYPE_GENRE = "genre", TYPE_SONG = "song",
     		TYPE_PLAYLIST  = "playlist", ALBUM_SUFFIX = "albartimg", ARTIST_SUFFIX = "artstimg", 
