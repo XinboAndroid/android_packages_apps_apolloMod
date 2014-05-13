@@ -9,7 +9,7 @@ package com.andrew.apolloMod;
  */
 public final class Constants {
 
-    // Last.fm API
+    // 最后点api
     public final static String LASTFM_API_KEY = "0bec3f7ec1f914d7c960c12a916c8fb3";
 
     // SharedPreferences
