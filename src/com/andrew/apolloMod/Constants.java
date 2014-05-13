@@ -8,8 +8,7 @@ package com.andrew.apolloMod;
  * @author Andrew Neal
  */
 public final class Constants {
-
-    // 最后点api
+    // 最后的什么api
     public final static String LASTFM_API_KEY = "0bec3f7ec1f914d7c960c12a916c8fb3";
 
     // SharedPreferences
