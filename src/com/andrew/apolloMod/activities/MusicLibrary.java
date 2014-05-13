@@ -131,7 +131,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection
         // 新的slidinguppanel库中没有setShadow方法,注释掉
         // mPanel.setShadowDrawable(getResources().getDrawable(R.drawable.above_shadow));
         mPanel.setAnchorPoint(0.0f);
-        // shizhong,hehe
+        
         mPanel.setPanelSlideListener(new PanelSlideListener()
         {
             @Override
@@ -154,7 +154,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection
                     }
                 }
             }
-
+	
             @Override
             public void onPanelExpanded(View panel)
             {
