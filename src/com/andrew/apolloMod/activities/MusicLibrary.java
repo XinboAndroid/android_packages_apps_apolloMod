@@ -107,7 +107,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection
             else
             {
                 isExit = true;
-                Toast.makeText(this, "在按一次退出程序  ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "再按一次退出程序  ", Toast.LENGTH_SHORT).show();
                 mHandler.sendEmptyMessageDelayed(0, 2000);
                 return false;
             }
