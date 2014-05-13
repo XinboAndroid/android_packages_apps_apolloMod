@@ -1,3 +1,4 @@
+
 /**
  * 
  */
@@ -59,6 +60,7 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
 import static com.andrew.apolloMod.Constants.TABS_ENABLED;
 
 /**
+ * 主页
  * @author Andrew Neal
  * @Note This is the "holder" for all of the tabs
  */
