@@ -113,8 +113,9 @@ public class PlaylistPicker extends Activity implements
                     Intent.ACTION_CREATE_SHORTCUT))
             {
                 MusicUtils.makePlaylistList(this, true, mAllPlayLists);
-
+                //dfdsggg
                 addToPlay(R.string.create_Shortcut);
+                //sddds
 //                for (int i = 0; i < mAllPlayLists.size(); i++)
 //                {
 //                    mPlayListNames.add(mAllPlayLists.get(i).get("name"));
