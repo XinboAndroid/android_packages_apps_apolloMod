@@ -10,7 +10,8 @@
 
     <!-- Tabs -->
     <dimen name="tab_padding_top_bottom">6dp</dimen>
-    <dimen name="tab_padding_left_right">40dp</dimen>
+    <dimen name="tab_padding_left">40dp</dimen>
+    <dimen name="tab_padding_left_right">8dp</dimen>
     <dimen name="tab_height">40dp</dimen>
 
     <!-- Bottom ActionBar -->

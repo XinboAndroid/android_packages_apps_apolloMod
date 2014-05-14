@@ -2,19 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/listview_item_height"
-    android:paddingTop="@dimen/listview_items_padding_top_bottom" 
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/selector_listitem_bg"
     android:paddingBottom="@dimen/listview_items_padding_top_bottom"
-	android:background="@drawable/listview_item_background" 
-    android:layout_gravity="center_vertical" >
- 
+    android:paddingTop="@dimen/listview_items_padding_top_bottom" >
+
     <ImageView
         android:id="@+id/listview_item_image"
         android:layout_width="@dimen/listview_album_art"
         android:layout_height="@dimen/listview_album_art"
         android:layout_alignParentLeft="true"
         android:layout_margin="@dimen/listview_album_margin"
-        android:scaleType="centerCrop" 
-	    android:background="@drawable/no_art_small"/>
+        android:background="@drawable/no_art_small"
+        android:scaleType="centerCrop" />
 
     <!-- Padding may be set on via code for some tabs -->
 

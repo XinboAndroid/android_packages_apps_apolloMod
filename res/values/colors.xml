@@ -11,7 +11,7 @@
     <color name="unselected_tabtext">#77000000</color>
 
     <!-- A semi-transparent dark Holo shade of blue -->
-    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="holo_blue_dark">#800011cc</color>
     
     <color name="shuffle_grey">#ffdedede</color>
 

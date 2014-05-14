@@ -11,9 +11,14 @@
         <item name="android:background">@drawable/actionbar</item>
         <item name="android:textColor">@color/actionbar_text</item>
     	<item name="android:titleTextStyle">@style/ApolloTheme.ActionBar.TitleTextStyle</item>
+    	<item name="android:subtitleTextStyle">@style/ApolloTheme.ActionBar.SubTitleTextStyle</item>
 	</style>
 	<style name="ApolloTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
 		<item name="android:textColor">@color/actionbar_text</item>
+	</style>
+	<style name="ApolloTheme.ActionBar.SubTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+		<item name="android:textColor">@color/actionbar_text</item>
+		<item name="android:textSize">@dimen/text_size_small</item>
 	</style>
 
     <!-- Translucent dialog (for @PlayExternal) -->
@@ -34,7 +39,7 @@
     <style name="Tabs">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/tab_height</item>
-        <item name="android:background">@drawable/tab</item>
+        <item name="android:background">@drawable/custom_tab_indicator</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingBottom">@dimen/tab_padding_top_bottom</item>
         <item name="android:paddingLeft">@dimen/tab_padding_left_right</item>
