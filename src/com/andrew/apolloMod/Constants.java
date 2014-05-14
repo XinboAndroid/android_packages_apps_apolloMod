@@ -8,8 +8,10 @@ package com.andrew.apolloMod;
  * @author Andrew Neal
  */
 public final class Constants {
+
 	// Last.fm API
 	public final static String LASTFM_API_KEY = "0bec3f7ec1f914d7c960c12a916c8fb3";
+
 	// SharedPreferences
 	public final static String APOLLO = "Apollo",
 			APOLLO_PREFERENCES = "apollopreferences", ARTIST_KEY = "artist",
