@@ -6,6 +6,7 @@ package com.andrew.apolloMod;
 
 /**
  * @author Andrew Neal
+ * @since 1.0
  * @date 2014-05-14
  */
 public final class Constants {
