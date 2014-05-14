@@ -18,13 +18,19 @@ package com.andrew.apolloMod.ui.widgets;
 
 import java.util.ArrayList;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.andrew.apolloMod.R;
+import com.andrew.apolloMod.activities.MusicLibrary;
 import com.andrew.apolloMod.ui.adapters.TabAdapter;
 
 /**
@@ -41,6 +47,8 @@ public class ScrollableTabView extends HorizontalScrollView implements
     private final LinearLayout mContainer;
 
     private final ArrayList<View> mTabs = new ArrayList<View>();
+
+	private MusicLibrary musicLibrary;
 
     public ScrollableTabView(Context context) {
         this(context, null);
@@ -74,7 +82,8 @@ public class ScrollableTabView extends HorizontalScrollView implements
             initTabs();
     }
 
-    public void setViewPager(ViewPager pager) {
+    public void setViewPager(MusicLibrary musicLibrary, ViewPager pager) {
+    	this.musicLibrary = musicLibrary;
         this.mPager = pager;
         mPager.setOnPageChangeListener(this);
 
@@ -96,14 +105,12 @@ public class ScrollableTabView extends HorizontalScrollView implements
 
             View tab = mAdapter.getView(i);
             mContainer.addView(tab);
-
             tab.setFocusable(true);
-
             mTabs.add(tab);
-
             tab.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                	Toast.makeText(getContext(), "test", Toast.LENGTH_LONG).show();
                     if (mPager.getCurrentItem() == index) {
                         selectTab(index);
                     } else {
@@ -139,14 +146,18 @@ public class ScrollableTabView extends HorizontalScrollView implements
     }
 
     private void selectTab(int position) {
-
         for (int i = 0, pos = 0; i < mContainer.getChildCount(); i ++ , pos++) {
             View tab = mContainer.getChildAt(i);
             tab.setSelected(pos == position);
         }
-        
         View selectedTab = mContainer.getChildAt(position);
-
+        TextView textView= (TextView) selectedTab.findViewById(R.id.tabs);
+        
+    	// 改变Actionbar的subtitle
+        String currTitle = textView.getText().toString();
+        ActionBar actBar = musicLibrary.getActionBar();
+        actBar.setSubtitle(currTitle);
+        
         final int w = selectedTab.getMeasuredWidth();
         final int l = selectedTab.getLeft();
 

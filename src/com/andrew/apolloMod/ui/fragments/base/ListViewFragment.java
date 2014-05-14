@@ -77,7 +77,7 @@ public abstract class ListViewFragment extends RefreshableFragment implements Lo
     }
 
     /*
-     * To be overrode in child classes to setup fragment data
+     * 子类重写这个方法设置ListView数据
      */
     public abstract void setupFragmentData();
     
@@ -85,6 +85,7 @@ public abstract class ListViewFragment extends RefreshableFragment implements Lo
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setupFragmentData();
+        // TODO 上下文菜单点击事件
         mListView.setOnCreateContextMenuListener(this);
         mListView.setOnItemClickListener(this);
         mListView.setAdapter(mAdapter);

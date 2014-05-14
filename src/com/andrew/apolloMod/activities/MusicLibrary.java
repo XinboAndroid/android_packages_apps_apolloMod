@@ -76,7 +76,6 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		// 请求新特性
-		
 		requestWindowFeature();
 		setContentView(R.layout.library_browser);
 		initSlidingUpPanel();
@@ -264,7 +263,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 		ScrollingTabsAdapter mScrollingTabsAdapter = new ScrollingTabsAdapter(
 				this);
 		mScrollingTabs.setAdapter(mScrollingTabsAdapter);
-		mScrollingTabs.setViewPager(mViewPager);
+		mScrollingTabs.setViewPager(this, mViewPager);
 	}
 
 	/**
@@ -272,8 +271,10 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	 */
 	private void initActionBar() {
 		ActionBar actBar = getActionBar();
+		actBar.setDisplayShowTitleEnabled(true);
+		actBar.setTitle("Apollo");
+		actBar.setLogo(R.drawable.ic_launcher);
 		actBar.setDisplayUseLogoEnabled(true);
-		actBar.setDisplayShowTitleEnabled(false);
 	}
 
 	/**
