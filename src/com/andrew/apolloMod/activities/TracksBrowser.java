@@ -4,6 +4,7 @@
 
 package com.andrew.apolloMod.activities;
 
+import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.*;
 import android.content.pm.ActivityInfo;
@@ -373,12 +374,16 @@ public class TracksBrowser extends FragmentActivity implements ServiceConnection
     			mViewPager.setCurrentItem(1);
     			TextView lineTwoView = (TextView)findViewById(R.id.half_artist_image_text_line_two);
     	        String lineTwo = MusicUtils.makeAlbumsLabel(this, 0, Integer.parseInt(getNumSongs()), true);
+    	        ActionBar actionBar = getActionBar();
+    	        actionBar.setSubtitle(lineTwo);
     			lineTwoView.setText(lineTwo);
     		}else{
     			mChangeButton.setImageResource(R.drawable.view_more_album);
     			mViewPager.setCurrentItem(0);
     			TextView lineTwoView = (TextView)findViewById(R.id.half_artist_image_text_line_two);
     			String lineTwo = MusicUtils.makeAlbumsLabel(this, Integer.parseInt(getNumAlbums()), 0, false);
+    	        ActionBar actionBar = getActionBar();
+    	        actionBar.setSubtitle(lineTwo);
     	        lineTwoView.setText(lineTwo);
     		}
     	}    	
@@ -430,11 +435,16 @@ public class TracksBrowser extends FragmentActivity implements ServiceConnection
             lineOne = genName;
         }
 
-        mImageProvider.loadImage( imageView, mInfo );        
+        ImageView bgImg = (ImageView) findViewById(R.id.bg_img);
+        mImageProvider.loadImage( bgImg, mInfo );        
         TextView lineOneView = (TextView)findViewById(R.id.half_artist_image_text);
         lineOneView.setText(lineOne);
         TextView lineTwoView = (TextView)findViewById(R.id.half_artist_image_text_line_two);
         lineTwoView.setText(lineTwo);
+        if (lineTwo != null && !"".equals(lineTwo))
+        {
+        	getActionBar().setSubtitle(lineTwo);
+        }
     }
 
     /**
