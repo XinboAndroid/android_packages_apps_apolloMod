@@ -92,11 +92,37 @@
     <string name="about">关于 Apollo</string>
     <string name="eqalizer">均衡器</string>
     <string name="header_interface">界面</string>
+    <string name="settings_storage_category">存储</string>
+    
     <string name="themes">主题</string>
     <string name="apollo_themes">选择 Apollo 的主题</string>
     <string name="select_theme">选择您的主题</string>
     <string name="version">Apollo 版本</string>
-
+    <string name="tab_visibility_title">定制显示功能标签</string>
+    <string name="tab_visibility_summary">设置显示哪些功能</string>
+    <string name="settings_delete_cache_title">清除缓存</string>
+    <string name="settings_delete_cache_summary">移除所有缓存图片</string>
+    <string name="delete_warning">将会删除所有图片</string>
+    <string name="visualizer_title">音乐频谱图形</string>
+    <string name="visualizer_summary">选择音乐播放时显示的频谱波形</string>
+    <string name="widget_style_title">桌面小组件风格</string>
+    <string name="widget_style_summary">选择小组件的风格</string>
+    <string name="widget_style_dark">Holo Dark</string>
+    <string name="widget_style_light">Holo Light</string>
+    <string name="about_apollomod_title">关于</string>
+    <string name="about_apollomod_message"><![CDATA[ApolloMod is an open source music player based on CyanogenMod\'s Apollo Music Player and released under the same Apache License.\n\n
+License Link:\n
+        http://www.apache.org/licenses/LICENSE-2.0.html \n\n
+ApolloMod Source Code:\n
+https://github.com/Splitter/android_packages_apps_apolloMod  \n\n
+Original Apollo Source Code: \n
+https://github.com/CyanogenMod/android_packages_apps_Apollo/tree/cm-10.1
+        
+    ]]></string>
+    <string name="dependencies">Dependency Licenses</string>
+    <string name="dependencies_title">Dependency Licenses:</string>
+    
+    
     <!-- Theme layout Buttons -->
     <string name="apply_theme">应用主题</string>
     <string name="get_more_themes">下载更多主题</string>
@@ -116,6 +142,8 @@
     <string name="tab_songs">歌曲</string>
     <string name="tab_playlists">播放列表</string>
     <string name="tab_genres">流派</string>
+    <string name="tab_online">在线</string>
+    
 
     <!-- Something went wrong -->
     <string name="error">错误</string>

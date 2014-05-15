@@ -27,7 +27,7 @@
         <ImageButton
             android:id="@+id/four_by_two_control_play"
             style="@style/FourByTwoMediaButton"
-            android:src="@drawable/apollo_holo_light_play"
+            android:src="@drawable/selector_play"
             android:contentDescription="@string/cd_play" />
 
         <ImageButton
