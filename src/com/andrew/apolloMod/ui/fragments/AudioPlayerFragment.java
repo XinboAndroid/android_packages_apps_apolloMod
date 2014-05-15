@@ -457,7 +457,7 @@ public class AudioPlayerFragment extends Fragment {
             if (MusicUtils.mService != null && MusicUtils.mService.isPlaying()) {
                 mPlay.setImageResource(R.drawable.apollo_holo_light_pause);
             } else {
-                mPlay.setImageResource(R.drawable.apollo_holo_light_play);
+                mPlay.setImageResource(R.drawable.selector_play);
             }
         } catch (RemoteException ex) {
             ex.printStackTrace();

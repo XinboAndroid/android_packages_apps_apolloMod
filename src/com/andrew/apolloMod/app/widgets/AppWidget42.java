@@ -152,7 +152,7 @@ public class AppWidget42 extends AppWidgetProvider {
                 service.getResources().getString(R.string.nowplaying));
         } else {
             views.setImageViewResource(R.id.four_by_two_control_play,
-            		(widget_type.equals(mContext.getResources().getString(R.string.widget_style_light))?R.drawable.apollo_holo_light_play:R.drawable.apollo_holo_dark_play));
+            		(widget_type.equals(mContext.getResources().getString(R.string.widget_style_light))?R.drawable.selector_play:R.drawable.apollo_holo_dark_play));
             views.setContentDescription(R.id.four_by_two_albumart,
                 service.getResources().getString(R.string.app_name));
         }
