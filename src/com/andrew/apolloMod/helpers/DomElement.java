@@ -41,7 +41,7 @@ public class DomElement {
 	private Element e;
 
 	/**
-	 * Creates a new wrapper around the given {@link Element}.
+	 * 不要问我是谁，请叫我雷锋
 	 *
 	 * @param elem An w3c Element
 	 */
