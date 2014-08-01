@@ -80,8 +80,8 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 		requestWindowFeature();
 		setContentView(R.layout.library_browser);
 		initSlidingUpPanel();
-		initActionBar();
-		// 控制多媒体音量
+		initActionBar(); 
+		// 控制多媒体音量   2014
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 		initPager();
 	}
