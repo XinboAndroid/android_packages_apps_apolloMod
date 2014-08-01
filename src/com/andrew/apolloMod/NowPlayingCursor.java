@@ -21,7 +21,7 @@ public class NowPlayingCursor extends AbstractCursor {
         makeNowPlayingCursor();
         context = c;
     }
-    //����ע��ʲô��
+    //风萧萧兮易水寒，壮士一去兮不复还
 
     private void makeNowPlayingCursor() {
         mCurrentPlaylistCursor = null;
