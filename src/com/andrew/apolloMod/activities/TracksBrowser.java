@@ -145,6 +145,11 @@ public class TracksBrowser extends FragmentActivity implements ServiceConnection
             public void onPanelCollapsed(View panel) {}
             @Override
             public void onPanelAnchored(View panel) {}
+			@Override
+			public void onPanelHidden(View panel) {
+				// TODO Auto-generated method stub
+				
+			}
         });
 	}
     
@@ -152,8 +157,8 @@ public class TracksBrowser extends FragmentActivity implements ServiceConnection
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
-    	if(mPanel.isExpanded()){
-            mPanel.collapsePane();
+    	if(mPanel.isPanelExpanded()){
+            mPanel.collapsePanel();
     	}
     	else{
     		super.onBackPressed();

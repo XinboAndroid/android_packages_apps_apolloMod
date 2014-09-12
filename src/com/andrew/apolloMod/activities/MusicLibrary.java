@@ -127,6 +127,12 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 			@Override
 			public void onPanelAnchored(View panel) {
 			}
+
+			@Override
+			public void onPanelHidden(View panel) {
+				// TODO Auto-generated method stub
+				
+			}
 		});
 		String startedFrom = getIntent().getStringExtra("started_from");
 		if (startedFrom != null) {
@@ -135,7 +141,7 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 				@Override
 				public void onGlobalLayout() {
 					if (!isAlreadyStarted) {
-						mPanel.expandPane();
+						mPanel.expandPanel();
 						isAlreadyStarted = true;
 					}
 				}
@@ -156,8 +162,8 @@ public class MusicLibrary extends FragmentActivity implements ServiceConnection 
 	@Override
 	public void onBackPressed() {
 		// super.onBackPressed();
-		if (mPanel.isExpanded()) {
-			mPanel.collapsePane();
+		if (mPanel.isPanelExpanded()) {
+			mPanel.collapsePanel();
 		} else {
 			super.onBackPressed();
 		}
