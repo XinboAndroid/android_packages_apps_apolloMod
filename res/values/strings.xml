@@ -7,7 +7,7 @@
 
     <!-- Content descriptions for the Bottom Action Bar -->
     <string name="cd_favorite">Make this a favorite song</string>
-    <string name="cd_search">Search through your music</string>
+    <string name="cd_search">商女不知亡国恨，隔江犹唱双截棍</string>
     <string name="cd_overflow">View more options</string>
     <string name="cd_bottom_action_bar_album_art">Album art for this song</string>
     <string name="cd_repeat">Repeat one or all</string>
@@ -135,9 +135,7 @@ License Link:\n
 ApolloMod Source Code:\n
 https://github.com/Splitter/android_packages_apps_apolloMod  \n\n
 Original Apollo Source Code: \n
-https://github.com/CyanogenMod/android_packages_apps_Apollo/tree/cm-10.1
-        
-    ]]></string>
+https://github.com/CyanogenMod/android_packages_apps_Apollo/tree/cm-10.1]]></string>
     <string name="dependencies">Dependency Licenses</string>
     <string name="dependencies_title">Dependency Licenses:</string>
     
